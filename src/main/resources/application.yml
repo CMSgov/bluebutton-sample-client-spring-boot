@@ -5,8 +5,8 @@ spring:
 security:
   oauth2:
     client:
-      clientId: iCATwKXjJ8U6GAbrKzQ87ZFXSi9cwlNRIUdcuV3l
-      clientSecret: LD49fvSblUrieAbDT2Vt0oyfmuUAabuYT96hxqAZAMOyxpuK0P22w7q1PWusOhmfdCVWAONNauNFS08z2NWjwlj3T7QGweypHR2Rav3Yk5uaAXGMP4xR2zVejP4ETUxZ
+      clientId: <YOUR CLIENT ID>
+      clientSecret: <YOUR CLIENT SECRET>
       accessTokenUri: https://sandbox.bluebutton.cms.gov/v1/o/token/
       userAuthorizationUri: https://sandbox.bluebutton.cms.gov/v1/o/authorize/
       tokenName: access_token

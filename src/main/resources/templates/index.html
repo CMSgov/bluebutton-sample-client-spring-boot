@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Demo</title>
+    <title>Spring Boot Sample App</title>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width"/>
     <base href="/"/>
@@ -13,7 +13,7 @@
     <script type="text/javascript" src="/webjars/js-cookie/js.cookie.js"></script>
 </head>
 <body>
-	<h1>Demo</h1>
+	<h1>Spring Boot Sample App</h1>
 	<div class="container"></div>
 	
 	<div class="container unauthenticated">
@@ -23,7 +23,6 @@
 	    Logged in as: <span id="user"></span>
 	    <div>
 			<button onClick="viewPatient()" class="btn btn-primary">Patient Data</button>
-			<button onClick="viewCoverage()" class="btn btn-primary">Coverage Data</button>
 			<button onClick="viewEoB()" class="btn btn-primary">EoB Data</button>
 		</div>
 		<div>
@@ -32,7 +31,7 @@
 	</div>
 	
 	<script type="text/javascript">
-	    $.get("/patient", function(data) {
+	    $.get("/principal", function(data) {
 	        $("#user").html(data.userAuthentication.details.entry[0].resource.name[0].given[0] +
 	        		" " + data.userAuthentication.details.entry[0].resource.name[0].family);
 	        $(".unauthenticated").hide()
@@ -50,10 +49,6 @@
 		
 		function viewPatient() {
 			window.location="http://localhost:8080/patient";
-		}
-		
-		function viewCoverage() {
-			window.location="http://localhost:8080/coverage";
 		}
 		
 		function viewEoB() {

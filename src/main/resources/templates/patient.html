@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Sample App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+	<h1>Patient Details</h1>
+	<div><a href="/">Back</a></div>
+	
+	<div>
+		<table th:each="patient : ${patient}" style="word-wrap: break-word; table-layout:fixed" border="2p">
+				<tr>
+					<td>Name</td>
+					<td th:text="${patient.name}">Name</td>
+				</tr>
+				<tr>
+					<td>Patient ID</td>
+					<td th:text="${patient.id}">ID</td>
+				</tr>
+				<tr>
+					<td>Birth Date</td>
+					<td th:text="${patient.birthDate}">Birth Date</td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td th:text="${patient.gender}">Gender</td>
+				</tr>
+		</table>
+	</div>
+</body>
+</html>

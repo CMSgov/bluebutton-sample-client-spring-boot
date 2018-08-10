@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Sample App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>EOBs</h1>
+	<div><a href="/">Back</a></div>
+	
+	<div>
+		<table style="word-wrap: break-word; table-layout:fixed" border="2p">
+			<col width="150">
+			<col width="150">
+			<col width="400">
+			<col width="150">
+			<tr>
+				<th>Claim Id</th>
+				<th>Patient Id</th>
+				<th>Diagnosis</th>
+				<th>Date</th>
+			<tr th:each="claims : ${claims}">
+				<td th:text="${claims.claimId}">Claim</td>
+				<td th:text="${claims.patient}">Patient</td>
+				<td th:text="${claims.diagnosis}">Diagnosis</td>
+				<td th:text="${claims.dates}">Dates</td>
+			</tr>
+		</table>
+	</div>
+	
+</body>
+</html>
