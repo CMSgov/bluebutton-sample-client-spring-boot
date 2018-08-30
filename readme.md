@@ -14,6 +14,14 @@ Please consider improving this code with your contributions. Pull requests welco
 ## Basic Setup
 
    https://github.com/CMSgov/bluebutton-sample-client-spring-boot.git
+   
+## Build Dependencies
+
+This project depends on the [HAPI FHIR](https://github.com/jamesagnew/hapi-fhir) project. You can checkout and build this project from a repository on GitHub, as follows:
+
+    $ git clone https://github.com/HHSIDEAlab/hapi-fhir.git hhsidealab-hapi-fhir.git
+    $ cd hhsidealab-hapi-fhir.git
+    $ mvn clean install -DskipITs=true -DskipTests=true
 
 
 ### Configuring Your Development Application
